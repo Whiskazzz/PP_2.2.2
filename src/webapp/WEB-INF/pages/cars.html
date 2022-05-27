@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<table>
+    <thead>
+    <tr>
+        <th>SerialNum</th>
+        <th>Weight</th>
+        <th>Model</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.serialNum}"></td>
+        <td th:text="${car.weight}"></td>
+        <td th:text="${car.model}"></td>
+    </tr>
+    </tbody>
+</table>
+</html>
