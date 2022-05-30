@@ -18,14 +18,10 @@ public class CarServiceImp implements CarService {
 
     @Override
     public List<Car> getNumOfCars(Integer num) {
-        if (num != null) {
-            if (num <= 5) {
-                return createCars().subList(0, num);
-            } else {
-                return createCars();
-            }
-        } else {
+        if (num == null || num >= 5 || num < 0) {
             return createCars();
+        } else {
+            return createCars().subList(0, num);
         }
     }
 }
